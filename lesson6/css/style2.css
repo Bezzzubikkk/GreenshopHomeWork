@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+.body {
+    font-family: 'Tahoma', sans-serif;
+    font-style: normal;
+    color: #3D3D3D;
+    background-color: #FFFFFF;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.header {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.1);
+    font-size: 0; 
+}
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%; 
+}
+.navigation {
+    display: inline-block;
+    vertical-align: middle;
+    width: 75%; 
+    text-align: right; 
+}
+.navigation ul {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px; 
+    vertical-align: middle;
+}
+.navigation ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.navigation ul li a {
+    text-decoration: none;
+}
+.line {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.line > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+}
+.login {
+    background-color: #46A358;
+    color: white;
+    text-decoration: none;
+    padding: 8px 17px;
+    border-radius: 6px;
+}
+.search {
+    background: none;      
+    border: none;         
+    padding: 0;            
+    cursor: pointer;       
+    display: inline-block; 
+    vertical-align: middle; 
+}
+.section {
+    background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+    margin-top: 5px;
+    font-size: 0; 
+}
+.capa-list {
+    padding: 60px 40px 40px 40px;
+}
+.capa {
+    display: inline-block;
+    vertical-align: middle; 
+    width: 55%;
+    font-size: 16px;
+}
+.img.capa {
+    display: inline-block;
+    vertical-align: middle;
+    width: 44%;
+    position: relative; 
+    font-size: 0; 
+}
+.wel {
+    font-size: 14px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.description {
+    color: #727272;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+span {
+    color: #46A358;
+}
+.button-shop {
+    display: inline-block;
+    background-color: #46A358;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.bigplant {
+    width: 100%;
+    max-width: 512px; 
+    display: block;
+}
+.smallplant {
+    position: absolute;
+    left: 0;     
+    bottom: 30px; 
+    width: 30%;
+}
