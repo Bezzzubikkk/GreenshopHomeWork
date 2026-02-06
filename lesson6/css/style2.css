@@ -18,23 +18,32 @@
     padding: 25px 0;
     border-bottom: 1px solid rgba(70, 163, 88, 0.1);
     font-size: 0; 
+    white-space: nowrap;
 }
 .logo {
     display: inline-block;
     vertical-align: middle;
-    width: 25%; 
+    width: 20%; 
 }
 .navigation {
     display: inline-block;
     vertical-align: middle;
-    width: 75%; 
-    text-align: right; 
+    width: 80%; 
+    text-align: center; /* Центрируем содержимое (меню) */
+    position: relative; /* Нужно для позиционирования иконок */
+}
+.navigation-top {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal; /* Возвращаем нормальный режим текста */
 }
 .navigation ul {
-    display: inline-block;
-    list-style: none;
-    font-size: 20px; 
+   display: inline-block;
     vertical-align: middle;
+    list-style: none;
+    font-size: 17px; /* Размер шрифта для ссылок */
+    margin: 0;
+    padding: 0;
 }
 .navigation ul li {
     display: inline-block;
@@ -43,12 +52,17 @@
 .navigation ul li a {
     text-decoration: none;
     color: #3D3D3D;
+    transition: 0.3s;
 }
 .line {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px;
-    width: 25%;
+    width: auto;
+    position: absolute; /* Вырываем из потока, чтобы не мешал центровке меню */
+    right: 0; /* Прижимаем плотно к правому краю */
+    top: 50%;
+    transform: translateY(-50%);
 }
 .line > * {
     display: inline-block;
