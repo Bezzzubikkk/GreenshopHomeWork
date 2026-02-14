@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.body {
+    font-family: "Cera Pro";
+    font-style: normal;
+    color: #3D3D3D;
+    background-color: #FFFFFF;
+}
+.wrapper {
+    max-width: 1220px;
+    min-width: 991px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.img-responsive {
+    width: 97%;       
+    height: auto;  
+}
+
+.header {
+    
+    margin: 0 auto;
+    padding: 17px 0 16px 0;
+    border-bottom: 0.5px solid rgba(70, 163, 88, 0.5);
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    height: auto;
+    min-width: 150px;
+    display: block;
+    
+}
+.navigation {
+   
+    margin-right: auto;
+    margin-left: 205px; /* регулируй 40–80px */
+    position: relative;
+    
+  
+}
+.navigation ul li a {
+    
+    text-decoration: none;
+    color: #3D3D3D;
+    line-height: 12px;
+    
+    
+}
+.navigation ul {
+    list-style: none;
+    display: flex;       /* Включает режим Flexbox для списка */
+   gap: 50px; 
+    
+    justify-content: center;
+
+}
+.navigation ul li {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.active {
+    font-weight: 700;
+    padding-bottom: 23px; /* Этот паддинг должен доходить ровно до линии border-bottom хедера */
+    border-bottom: 3px solid #46A358;
+}
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 16px;
+    text-align: right;
+    min-width: 180px;
+    position: relative;
+   
+   
+}
+.search {
+    border: none;
+    background-color: transparent;
+    margin-right: 13px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-top: 4px;
+
+}
+.shop {
+    margin-right: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+
+}
+.login {
+    display: flex;           /* превращаем ссылку в flex-контейнер */
+    justify-content: center; /* центр по горизонтали */
+    align-items: center;     /* центр по вертикали */
+    background-color: #46A358;
+    border-radius: 6px;
+    padding: 8px 16px 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    gap: 8px;
+}
+
+
+.main {
+    margin-bottom: 146px;
+}
+.section {
+    margin-top: 2px;
+    max-width: 100%;
+    margin-top: 0;
+    background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+.capa-list {
+    display: flex;
+    align-items: flex-start; /* Текст и картинка встанут по верхней линии */
+    justify-content: space-between;
+    padding-top: 78px;
+    
+    height: 450px;
+}
+
+.capa-list > .capa:first-child {
+    padding-top: 0; 
+    padding-left: 40px;
+    flex: 1 1 50%;
+}
+
+
+
+.capa-list > .capa:last-child {
+    flex: 0 1 45%; /* Уменьшаем долю картинки в ряду */
+    height: 100%;  /* Контейнер на всю высоту секции */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.capa-list > .capa:last-child .plant {
+    max-width: 96%;      /* уменьшаем ширину картинки */
+    height: auto;        /* сохраняем пропорции */
+    transform: translate(10px, -17px); /* сдвигаем: 20px вправо, 20px вверх */
+}
+
+
+
+.capa.text {
+    
+    vertical-align: middle;
+    
+    font-size: 16px;   /* Возвращаем размер шрифта, так как у родителя он 0 */
+    padding-left: 40px;
+}
+.wel {
+    font-size: 14px;
+    line-height: 16px; 
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.title {
+    color: #3D3D3D;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-family: "Cera Pro";
+    font-style: normal;
+    margin-bottom: 9px;
+    
+
+}
+.span {
+    color: #46A358;
+}
+.description {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    margin-bottom: 52px;
+}
+.button-shop {
+    color: #FFF;
+    border-radius: 6px;
+    background: #46A358;
+    text-decoration: none;
+    padding: 9px 27px 9px 26px;
+    text-transform: uppercase;
+}
+
+
+.plant {   
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    
+}
+
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 -10px;
+    margin-top: 61px;
+    
+    
+}
+.catalog-left {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* теперь элементы идут сверху */
+    width: 25%;
+    align-items: flex-start;
+    gap: 20px; 
+}
+.catalog h3 {
+   font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+    padding-bottom: 7px;
+    margin-left: 25px; /* чуть левее списка */
+}
+.menu {
+    width: 100%;
+    padding-bottom: 350px;
+}
+.menu li {
+  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 36px; /* отступ от левого края списка */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu ul{
+    padding-left: 0; /* убираем отступ слева */
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* равномерное распределение элементов */
+    height: auto; /* можно задать конкретную высоту, если нужно */
+    
+}
+.menu ul a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-family: "Cera Pro";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.baner {
+    width: 100%;
+    margin: 0;
+}
+.baner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Основной контейнер каталога */
+.catalog-main {
+    width: 75%;
+    margin: 0; /* Убрали отрицательный маржин, который уводил всё вверх в молоко */
+    margin-top: -16px;        /* поднять на 20px */
+    padding-left: 10px;
+    
+}
+
+/* Фильтры */
+.catalog-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.catalog-filter-link li a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-size: 15px;
+    padding-bottom: 7px; /* Место для линии active */
+    font-weight: 400;
+    line-height: 16px;
+}
+.catalog-filter-link ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-filter-link li {
+   
+    margin-right: 47px;
+    margin-left: 0;
+}
+
+.active-link {
+    font-weight: 700;
+    color: #46A358;
+    border-bottom: 2px solid #46A358;
+}
+
+/* Сортировка */
+.catalog-sort {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+
+.sort-label {
+    color: #3D3D3D;
+}
+
+.sort-select {
+    border: none;
+    background: transparent;
+    font-family: "Cera Pro";
+    cursor: pointer;
+}
+/* Список карточек */
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 24px; /* Фиксированный зазор между карточками из макета */
+    margin: 0;
+     align-items: flex-start;
+}
+/* Каждая карточка */
+.item {
+   width: calc((100% - 62px) / 3); /* ширина 3 колонки */
+    margin-bottom: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+.item a {
+    text-decoration: none;
+}
+
+/* Контейнер картинки */
+.catalog-item-pic {
+    width: 100%;
+    height: 300px; /* фиксированная высота картинки */
+    background-color: #FBFBFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+
+/* Текст под картинкой */
+.catalog-item {
+    text-align: left;
+    padding: 10px 0;
+    flex-grow: 1; /* текст занимает оставшееся место */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.catalog-item-title {
+    font-size: 16px;
+    color: #3D3D3D;
+    margin-bottom: 3px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+.catalog-item-price {
+    color: #46A358;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.catalog-navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 75px;
+    margin-right: 10px;
+}
+
+.catalog-navigation a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    color: #3D3D3D;
+    background-color: #FBFBFB;
+}
+
+/* активная страница */
+.catalog-navigation .nav-link.active-1 {
+    background-color: #46A358;
+    color: #fff;
+    border: none;
+}
+
+/* стрелки */
+.nav-arrow {
+    background-color: #FBFBFB;
+}
