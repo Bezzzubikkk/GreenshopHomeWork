@@ -82,7 +82,7 @@
 .navigation {
    
     margin-right: auto;
-    margin-left: 205px; /* регулируй 40–80px */
+    margin-left: 205px;
     position: relative;
     
   
@@ -97,7 +97,7 @@
 }
 .navigation ul {
     list-style: none;
-    display: flex;       /* Включает режим Flexbox для списка */
+    display: flex;       
    gap: 50px; 
     
     justify-content: center;
@@ -111,7 +111,7 @@
 
 .active {
     font-weight: 700;
-    padding-bottom: 23px; /* Этот паддинг должен доходить ровно до линии border-bottom хедера */
+    padding-bottom: 23px; 
     border-bottom: 3px solid #46A358;
 }
 .line {
@@ -142,9 +142,9 @@
 
 }
 .login {
-    display: flex;           /* превращаем ссылку в flex-контейнер */
-    justify-content: center; /* центр по горизонтали */
-    align-items: center;     /* центр по вертикали */
+    display: flex;           
+    justify-content: center; 
+    align-items: center;   
     background-color: #46A358;
     border-radius: 6px;
     padding: 8px 16px 8px;
@@ -167,7 +167,7 @@
 }
 .capa-list {
     display: flex;
-    align-items: flex-start; /* Текст и картинка встанут по верхней линии */
+    align-items: flex-start; 
     justify-content: space-between;
     padding-top: 78px;
     
@@ -183,16 +183,16 @@
 
 
 .capa-list > .capa:last-child {
-    flex: 0 1 45%; /* Уменьшаем долю картинки в ряду */
-    height: 100%;  /* Контейнер на всю высоту секции */
+    flex: 0 1 45%; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 .capa-list > .capa:last-child .plant {
-    max-width: 96%;      /* уменьшаем ширину картинки */
-    height: auto;        /* сохраняем пропорции */
-    transform: translate(10px, -17px); /* сдвигаем: 20px вправо, 20px вверх */
+    max-width: 96%;     
+    height: auto;       
+    transform: translate(10px, -17px);
 }
 
 
@@ -201,7 +201,7 @@
     
     vertical-align: middle;
     
-    font-size: 16px;   /* Возвращаем размер шрифта, так как у родителя он 0 */
+    font-size: 16px;  
     padding-left: 40px;
 }
 .wel {
@@ -268,7 +268,7 @@
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* теперь элементы идут сверху */
+    justify-content: flex-start;
     width: 25%;
     align-items: flex-start;
     gap: 20px; 
@@ -278,7 +278,7 @@
     font-weight: 700;
     line-height: 16px;
     padding-bottom: 7px;
-    margin-left: 25px; /* чуть левее списка */
+    margin-left: 25px;
 }
 .menu {
     width: 100%;
@@ -289,17 +289,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 36px; /* отступ от левого края списка */
+    padding-left: 36px; 
     padding-top: 0;
     padding-bottom: 0;
 }
 .menu ul{
-    padding-left: 0; /* убираем отступ слева */
+    padding-left: 0;
     margin-left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* равномерное распределение элементов */
-    height: auto; /* можно задать конкретную высоту, если нужно */
+    justify-content: space-between;
+    height: auto;
     
 }
 .menu ul a {
@@ -319,16 +319,13 @@
     height: auto;
     display: block;
 }
-/* Основной контейнер каталога */
 .catalog-main {
     width: 75%;
-    margin: 0; /* Убрали отрицательный маржин, который уводил всё вверх в молоко */
-    margin-top: -16px;        /* поднять на 20px */
+    margin: 0; 
+    margin-top: -16px;    
     padding-left: 10px;
     
 }
-
-/* Фильтры */
 .catalog-filter {
     display: flex;
     justify-content: space-between;
@@ -340,7 +337,7 @@
     text-decoration: none;
     color: #3D3D3D;
     font-size: 15px;
-    padding-bottom: 7px; /* Место для линии active */
+    padding-bottom: 7px; 
     font-weight: 400;
     line-height: 16px;
 }
@@ -383,17 +380,17 @@ line-height: 16px;
     font-family: "Cera Pro";
     cursor: pointer;
 }
-/* Список карточек */
+
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px 24px; /* Фиксированный зазор между карточками из макета */
+    gap: 50px 24px;
     margin: 0;
      align-items: flex-start;
 }
-/* Каждая карточка */
+
 .item {
-   width: calc((100% - 62px) / 3); /* ширина 3 колонки */
+   width: calc((100% - 62px) / 3); 
     margin-bottom: 0;
     background-color: transparent;
     display: flex;
@@ -403,10 +400,10 @@ line-height: 16px;
     text-decoration: none;
 }
 
-/* Контейнер картинки */
+
 .catalog-item-pic {
     width: 100%;
-    height: 300px; /* фиксированная высота картинки */
+    height: 300px; 
     background-color: #FBFBFB;
     display: flex;
     align-items: center;
@@ -416,12 +413,10 @@ line-height: 16px;
     flex-shrink: 0;
 }
 
-
-/* Текст под картинкой */
 .catalog-item {
     text-align: left;
     padding: 10px 0;
-    flex-grow: 1; /* текст занимает оставшееся место */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -463,14 +458,13 @@ line-height: 16px;
     background-color: #FBFBFB;
 }
 
-/* активная страница */
+
 .catalog-navigation .nav-link.active-1 {
     background-color: #46A358;
     color: #fff;
     border: none;
 }
 
-/* стрелки */
 .nav-arrow {
     background-color: #FBFBFB;
 }
