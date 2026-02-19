@@ -569,16 +569,14 @@
     background-color: #FBFBFB;
 }
 .plants-bottom {
-
     display: flex;
-    margin-top: 109px;
-    flex-wrap: wrap;  
-    justify-content: space-around;   
-    gap: 20px;       
+    flex-wrap: wrap;
+    margin: 109px -10px 130px;       
 }
 .plant-left,
 .plant-right {
-    width: 48.5%;  
+    width: 50%;  
+    padding: 0 10px;
     display: flex;
     align-items: center;
     background:  #FBFBFB;
