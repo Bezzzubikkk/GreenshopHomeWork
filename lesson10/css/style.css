@@ -457,7 +457,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
 }
+
+
 
 .catalog-item {
     padding: 10px 0;
@@ -472,6 +475,7 @@
     margin-bottom: 3px;
     line-height: 16px;
     margin-top: 8px;
+    color: #3D3D3D;
 }
 .sale {
     display: flex;
