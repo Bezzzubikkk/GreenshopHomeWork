@@ -65,29 +65,25 @@
 }
 
 .header {
-    padding: 17px 0 16px 0;
+    padding: 20px 0 12px 0;
     display: flex;
     align-items: center;  
     justify-content: space-between;
     height: 73px;         
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
-    margin-bottom: 12px;
-}
-.logo {
-    height: auto;
-    min-width: 150px;
-    
+    margin-bottom: 10px; /* ← вот это */
+
 }
 
 .navigation {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 51px;
     padding: 0;
+    padding-bottom: 7px;
 }
 .navigation > li {
     position: relative;
-    padding: 0;
 }
 .navigation > li:hover ul {
     display: block;
@@ -113,15 +109,11 @@
 }
 .navigation > ul {
     list-style: none;
-    display: flex;       
-    gap: 50px; 
+    display: flex;        
     justify-content: center;
 
 }
-.navigation > ul > li {
-    padding: 0;
-    margin: 0;   
-}
+
 .navigation > li:hover > a::after {
     background-color: #46A358;
 }
@@ -143,7 +135,7 @@
 }
 
 .navigation ul a {
-    background-color:#EDF6EE;;
+    background-color:#EDF6EE;
     text-decoration: none;
     color: #3D3D3D;
     display: flex;
@@ -175,7 +167,7 @@
     vertical-align: middle;
     cursor: pointer;
     display: flex;
-    
+    margin-top: -5px;
 }
 
 
@@ -183,6 +175,7 @@
     text-decoration: none;
     position: relative;
     display:flex;
+    margin: -5px 5px 0 -6px;
 }
 
 .number {
@@ -221,44 +214,41 @@
     padding: 8px 16px 8px;
     text-decoration: none;
     color: #FFFFFF;
-    gap: 8px;
-}
-.main {
-    margin-bottom: 146px;
+    gap: 7px;
+    margin-top: -6px;
 }
 .section {
     background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
-    padding-bottom: 10px;
-    margin: 0;
+    padding: 2px 0 0;
+    
 }
 .capa-list {
-    padding: 78px 10px 0; /* 10px по бокам вернут текст на линию логотипа */
     display: flex;
     justify-content: space-between;
-    height: 450px;
+    align-items: center; 
+    width: 100%;
 }
 
-.capa-list > .capa:first-child {
-    padding-top: 0; 
-    padding-left: 40px;
-    width: 55%;
+.capa-circle {
+    width: 57%; 
+    align-self: flex-start;
+    padding: 69px 0 0 40px;
 }
 
-
-
-.capa-list > .capa:last-child {
-    width: 45%; 
-    
+.img-capa {
+    width: 43%; 
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-}
-.capa-list > .capa:last-child .plant {
-    max-width: 100%;     
-    height: auto;       
-    
+    box-sizing: border-box;
+    padding-left: 10px;
 }
 
+.img-capa .img-responsive {
+   
+}
+.main {
+    border-bottom: 0.5px solid #46A358;
+}
 .capa.text {
     font-size: 16px;  
     padding-left: 40px;
@@ -270,14 +260,14 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: 500;
-    margin-bottom: 4px;
+    
 }
 .title {
     font-size: 70px;
     font-weight: 900;
     line-height: 70px;
     text-transform: uppercase;
-    margin-bottom: 9px;
+    padding: 3px 0 10px;
     
 
 }
@@ -289,7 +279,7 @@
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
-    margin-bottom: 52px;
+    padding: 0 0 50px;
 }
 .button-shop {
     color: #FFF;
@@ -299,24 +289,14 @@
     padding: 9px 27px 9px 26px;
     text-transform: uppercase;
 }
-
-
-.plant {   
-    max-width: 100%;
-    height: auto;
-   
-    
-}
-
-
 .catalog {
     display: flex;
     flex-wrap: wrap;
-    margin: 61px -10px 0;
+    margin: 0 -10px;
 }
 .catalog-left {
     width: 25%;
-    margin: 0 -10px;
+    padding: 51px 0 0 2px;
 }
 .catalog h3 {
    font-size: 18px;
@@ -326,7 +306,7 @@
     margin-left: 25px;
 }
 .menu {
-    width: 100%;
+    background: #FBFBFB;
    
 }
 .menu li {
@@ -368,14 +348,14 @@
 }
 .catalog-main {
     width: 75%;    
-    margin: 0 -10px;
+    padding: 35px 10px 29px;
     
 }
 .catalog-filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 31px;
+    margin-bottom: 34px;
 }
 
 .catalog-filter-link li a {
@@ -419,29 +399,33 @@
     color: #3D3D3D;
     display: flex;
     align-items: center;
+    
 }
 
-
+.sorting {
+    padding: 0 15px;
+}
 
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px 24px;
+    margin: 0 -10px;
     align-items: flex-start;
 }
 
 .item {
    width: 33.333%;
-   padding: 0 10px;
-   display: flex;
-   margin: 0 -10px;
-   flex-wrap: wrap;
+   padding: 1px 10px 56px;
+   
 }
 .item a {
     text-decoration: none;
 }
 
-
+.pic-inner {
+    width: 93%;   /* регулируешь размер */
+    padding-bottom: 7px;
+}
 .catalog-item-pic {
     height: 300px; 
     background-color: #FBFBFB;
@@ -452,7 +436,9 @@
 
 }
 
-
+.catalog-item-pic .img-responsive {
+   
+}
 
 .catalog-item {
     padding: 10px 0;
@@ -460,11 +446,13 @@
     justify-content: flex-start;
     border-top: 1px solid transparent;
     position: relative;
+    
+    
 }
 
 .catalog-item-title {
     font-size: 16px;
-    margin-bottom: 3px;
+    padding: 5px 0 4px;
     line-height: 16px;
     margin-top: 8px;
     color: #3D3D3D;
@@ -486,15 +474,16 @@
     font-weight: 400;
     line-height: 16px;
     text-decoration: line-through;
-    padding-left: 50%;
-    transform: translateX(-50%);
+    padding-left: 64%;
+    transform: translateX(-64%);
+    
 }
 .catalog-navigation {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: 75px;
-    margin-right: 10px;
+    margin: 20px 0 0;
+    
 }
 
 .catalog-navigation a {
@@ -519,14 +508,14 @@
     padding: 7px 8px 6px 9px;
     text-transform: uppercase;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 0;
     z-index: 1;
 }
 .catalog-icons {
     position: absolute;
     transform: translateX(-50%);
-    bottom: 7px;
+    bottom: 17px;
     width: 135px;
     justify-content: space-between;
     left: 50%;
@@ -562,70 +551,82 @@
 }
 .plants-bottom {
     display: flex;
-    flex-wrap: wrap;
-    margin: 109px -10px 130px;       
+    gap: 20px; /* Вернул 20px как было у тебя изначально */
+    justify-content: space-between; 
+    padding-top: 75px;
 }
+
 .plant-left,
 .plant-right {
     width: 50%;  
-    padding: 0 10px;
     display: flex;
-    align-items: center;
-    background:  #FBFBFB;
+    align-items: stretch; /* ← вот это главное */
+    background: #FBFBFB;
+    min-height: 290px;
 }
 
 .img-succulents {
-    width: 45%;       
-    padding: 0;
+    width: 46%; 
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
-
-
-
+.img-succulents .img-responsive {
+    height: 100%;
+    object-fit: cover; 
+}
 .title-right {
-    width: 55%;                   
+    width: 54%; 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;       
+    align-items: flex-end; 
     text-align: right;
-    padding: 0 19px 0 0;
+    /* Увеличиваем padding-top, чтобы опустить буквы на макет */
+    /* Увеличиваем padding-right, чтобы сдвинуть буквы влево на макет */
+    padding: 57px 20px 15px 0; 
+   
+    
 }
-
-
+.plant-right .item-p,
+.plant-right .more {
+    padding-right: 3px; /* подгони 20–40px как нужно */
+}
 .title-article {
-    font-family: "Cera Pro";
     font-size: 18px;
     font-weight: 900;
-    line-height: 24px;
+    line-height: 23px; /* Уплотняем строки */
     text-transform: uppercase;
     color: #3D3D3D;
-    margin-bottom: 21px;
+    margin: 0 0 15px 0;
 }
-
 
 .item-p {
-    font-family: "Cera Pro";
-    font-size: 14px;
+   font-size: 14px;
     color: #727272;
-    line-height: 24px;
-    font-weight: 400;
+    line-height: 23px; 
+    padding: 0;
+    /* Увеличиваем первый ноль (margin-top), чтобы опустить текст ниже */
+    margin: 11px 0 23px 0;
+}
+.plant-right .item-p {
     margin-bottom: 20px;
 }
-
-
 .btn-more {
     display: flex;
+    align-self: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     background: #46A358;
-    padding: 10px 25px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 26px 10px; 
     border-radius: 6px;
 }
 
-.more  {
+.more {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
     display: flex;
@@ -635,23 +636,24 @@
 .blogs-btm {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    padding-top: 125px;
     
 }
 .btm-title-item {
     text-align: center;
+ 
 }
 .blogs-btm h2 {
     font-size: 30px;
     font-weight: 700;
-    padding-bottom: 15px;
+    padding: 1px 0 6px 20px;
 }
 .btm-title {
     color: #727272;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
 }
 
 .blog-item {
@@ -659,41 +661,51 @@
     flex-direction: row;
     margin: 0 -10px;
 }
+.art-title{
+    padding: 8px 15px 0;
+}
 .art-blog {
     width: 25%;
-    background: #FBFBFB;
     padding: 0 10px;
 }
 .art-blog h3{
 font-size: 20px;
 font-weight: 700;
 line-height: 26px; 
-padding-bottom: 4.5px;
+
+}
+.background-art {
+    background: #FBFBFB;
 }
 .blogs-btm a {
     text-decoration: none;
     color: #3D3D3D;
 }
 .sept {
-    color: #46A358;
+   color: #46A358;
     font-size: 14px;
     font-weight: 500;
-    padding: 15px 0  5px;
-    
+    padding: 3px 0 5px;
+    line-height: 16px;
+    word-spacing: 1px; 
+    height: auto;
 }
 .blog-title {
     color: #727272;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    padding-bottom: 6px;
+    padding-bottom: 3px;
 }
 .btn-blogs {
     font-size: 14px;
     font-weight: 500;
     display: flex;
     align-items: center;
+    gap: 6px;
+    padding-bottom: 15px;
 }
+
 .art-blog:hover .btn-blogs {
     color: #46A358;
     
@@ -703,20 +715,38 @@ padding-bottom: 4.5px;
 }
 .article-plant {
     display: flex;
-    margin: 0 -10px;
     background: #FBFBFB;
+    padding-top: 97px;
 }
 .plant-info {
-    width: 22%;
-    padding: 27px 10px ;
+    width: 20%;
+    padding: 27px 0 7px 0;
+    margin-right: 14px;
+}
+.info-title{
+    color: #727272;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px; 
+    padding: 7px 0 ;
 }
 .form-item {
-    width: 34%;
-    padding: 37px 10px 33px;
+    width: 35%;
+    padding: 36px 0 0 33px;
+    margin-left: auto; /* сдвиг вправо */
+   
+}
+.info-item {
+    padding: 10px 0;
+}
+.info-item h4{ 
+    font-size: 17px;
+    font-weight: 700;
 }
 .form-item h4 {
     font-size: 18px;
     font-weight: 700;
+   
 }
 .form-btm {
     color: #727272;
@@ -724,53 +754,77 @@ padding-bottom: 4.5px;
     font-weight: 400;
     line-height: 22px; 
     text-align: justify;
+    padding: 0 34px 0 0 ;
 }
 .form-input {
-    width: 206px;
+    width: 76%; /* теперь ровно 75% */
     height: 40px;
     border: 1px solid #E5E5E5;
+    padding: 13px 12px;
+    border-radius: 6px 0 0 6px;
+    font-size: 14px;
+    color: #ACACAC;
+    line-height: 16px;
+
+
 }
 .form-title {
-    padding: 18px 33px 17px 0;
     display: flex;
+    width: 100%;
+    padding: 16px 34px 15px 0;
 }
 .button-form {
-    width: 85px;
+    width: 24%; 
     height: 40px;
     border-radius: 0 6px 6px 0;
     border: none;
     background: #46A358;
     color: #fff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    padding: 12px 17px 12px 34px;
+    padding-left: 18px;
 }
 .footer {
     padding-bottom: 35px ;
+    
 }
 .greenline {
     background-color: rgba(70, 163, 88, 0.1);
     
 }
 .contact-line {
-    min-height: 88px;              
+    padding: 21px 0 19px;             
     display: flex;
     align-items: center;          
+    /* Прижимаем всё к левому краю, чтобы контролировать отступы вручную */
     justify-content: flex-start;  
-    gap: 80px; 
+}
+
+.logo-contant {
+    /* Подбираем точный отступ от лого до первого контакта (адреса) */
+    /* На скрине разрыв большой, попробуй 80px - 100px */
+    margin: 2px 110px 0 0; 
 }
 
 .contact {
     display: flex;
     align-items: center;
-    gap: 10px;
-    max-width: 250px;
+    /* Убираем ширину 24%, она расталкивает блоки */
+    width: auto; 
+    /* Задаем расстояние между самими контактами */
+    /* Это подвинет 2-й и 3-й блоки влево к первому */
+    margin-right: 68px; 
     text-decoration: none;
     color: #3D3D3D;
-    
 }
-.contact a{
+
+/* Последнему контакту отступ справа не нужен */
+.contact:last-child {
+    margin-right: 0;
+}
+
+.contact a {
     display: flex; 
     align-items: center; 
     gap: 10px;
@@ -780,36 +834,64 @@ padding-bottom: 4.5px;
     line-height: 22px;
     font-weight: 400;
 }
+.contact:nth-child(3) {
+    /* Отрицательный margin-top поднимает блок вверх */
+    margin-top: -3px; 
+    /* Расстояние до третьего контакта (телефона) */
+    margin-right: 60px; 
+}
+
+/* Выбираем третий контакт (телефон) */
+.contact:nth-child(4) {
+    /* Поднимаем вверх так же, как и второй */
+    margin-top: -3px; 
+    /* Сдвигаем ВЛЕВО: уменьшаем margin-right у ПРЕДЫДУЩЕГО блока */
+}
 .footer-item {
     display: flex;
+    /* Возвращаем space-between, чтобы соцсети улетели вправо автоматически */
     justify-content: space-between; 
-    padding: 33px 0;
+    padding: 30px 0;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2); 
+    border-top: 0.5px solid #46A358;
+    width: 100%;
+    margin: 0 -10px;
+    
 }
 
 .footer-title {
     display: flex;
-    width: 70%; 
+    width: 65%;
+    padding:0  10px;
+   
 }
 
 .footer-help {
-    width: 33.33%; 
+   
+    width: 33.33%;
 }
 .footer-help li:hover a {
     color: #46A358;
 }
 .footer-social {
-    width: 30%; 
+    width: 25%; 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-right: 77px;
 }
-
+.footer-help + .footer-help {
+    margin-left: 3px; 
+}
+.footer-help + .footer-help + .footer-help {
+    margin-left: 1px; 
+}
 .social-list ul {
     display: flex;
     gap: 10px;
     list-style: none;
     padding: 0;
-    margin: 15px 0 33px 0; 
+    margin: 15px 0 30px 0; 
 }
 
 .social-list li a {
@@ -827,15 +909,25 @@ padding-bottom: 4.5px;
     border-color: #46A358;
 }
 
-.footer-help h3, 
-.social-list h3, 
-.pay h3 {
+.footer-help h3{
     font-size: 18px;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 4px;
+}
+.social-list h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 6px;
+}
+
+.pay h3 {
+ font-size: 18px;
     font-weight: 700;
     color: #3D3D3D;
     margin-bottom: 10px;
 }
-
 .ul-footer {
     list-style: none;
     padding: 0;
