@@ -42,12 +42,13 @@
 }
 
 
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 .body {
-    font-family: "Cera Pro";
+    font-family: "Cera Pro", "Tahoma", sans-serif;
     font-style: normal;
     color: #3D3D3D;
     background-color: #FFFFFF;
@@ -59,37 +60,45 @@
     padding: 0 10px;
 }
 .img-responsive {
-    width: 100%;       
+    max-width: 100%;       
     height: auto;  
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .header {
-    padding: 17px 0 16px 0;
+    padding: 20px 0 12px 0;
     display: flex;
     align-items: center;  
     justify-content: space-between;
     height: 73px;         
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
-    margin-bottom: 12px;
-}
-.logo {
-    height: auto;
-    min-width: 150px;
-    
+    margin-bottom: 10px; 
+
 }
 
 .navigation {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 51px;
     padding: 0;
+    padding-bottom: 7px;
+    
 }
 .navigation > li {
     position: relative;
-    padding: 0;
 }
 .navigation > li:hover ul {
     display: block;
+    
 }
 .navigation > li > a {
     
@@ -101,6 +110,7 @@
     position: relative;
     
 }
+
 .navigation > li > a::after {
     content: "";
     position: absolute;
@@ -109,20 +119,19 @@
     width: 100%;
     height: 3px;
     background-color: transparent;
+    transition-duration: 0.3s;
+    transition-property: background-color;
 }
 .navigation > ul {
     list-style: none;
-    display: flex;       
-    gap: 50px; 
+    display: flex;        
     justify-content: center;
 
 }
-.navigation > ul > li {
-    padding: 0;
-    margin: 0;   
-}
+
 .navigation > li:hover > a::after {
     background-color: #46A358;
+
 }
 .navigation ul {
     list-style: none;
@@ -142,8 +151,7 @@
 }
 
 .navigation ul a {
-    background-color:#EDF6EE;;
-    padding: 5px;
+    background-color:#EDF6EE;
     text-decoration: none;
     color: #3D3D3D;
     display: flex;
@@ -175,7 +183,7 @@
     vertical-align: middle;
     cursor: pointer;
     display: flex;
-    
+    margin-top: -5px;
 }
 
 
@@ -183,6 +191,7 @@
     text-decoration: none;
     position: relative;
     display:flex;
+    margin: -5px 5px 0 -6px;
 }
 
 .number {
@@ -221,49 +230,40 @@
     padding: 8px 16px 8px;
     text-decoration: none;
     color: #FFFFFF;
-    gap: 8px;
-}
-.main {
-    margin-bottom: 146px;
+    gap: 7px;
+    margin-top: -6px;
 }
 .section {
-    margin-top: 2px;
-    max-width: 100%;
-    margin-top: 0;
     background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
-    padding-bottom: 10px;
-    margin-bottom: 0;
+    padding: 2px 0 0;
+    
 }
 .capa-list {
     display: flex;
     justify-content: space-between;
-    padding: 78px 0 0;
-    height: 450px;
+    align-items: center; 
+    width: 100%;
 }
 
-.capa-list > .capa:first-child {
-    padding-top: 0; 
-    padding-left: 40px;
-    flex: 1 1 50%;
+.capa-circle {
+    width: 57%; 
+    align-self: flex-start;
+    padding: 69px 0 0 40px;
 }
 
-
-
-.capa-list > .capa:last-child {
-    flex: 0 1 45%; 
-    height: 100%; 
+.img-capa {
+    width: 43%; 
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-}
-.capa-list > .capa:last-child .plant {
-    max-width: 100%;     
-    height: auto;       
+    box-sizing: border-box;
+    padding-left: 10px;
     
 }
 
+.main {
+    border-bottom: 0.5px solid #46A358;
+}
 .capa.text {
-    vertical-align: middle;  
     font-size: 16px;  
     padding-left: 40px;
 }
@@ -274,16 +274,14 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: 500;
-    margin-bottom: 4px;
+    
 }
 .title {
     font-size: 70px;
-    font-style: normal;
     font-weight: 900;
     line-height: 70px;
     text-transform: uppercase;
-    font-style: normal;
-    margin-bottom: 9px;
+    padding: 2px 0 10px;
     
 
 }
@@ -295,7 +293,7 @@
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
-    margin-bottom: 52px;
+    padding: 0 0 50px;
 }
 .button-shop {
     color: #FFF;
@@ -305,43 +303,33 @@
     padding: 9px 27px 9px 26px;
     text-transform: uppercase;
 }
-
-
-.plant {   
-    max-width: 100%;
-    height: auto;
-   
-    
-}
-
-
 .catalog {
     display: flex;
-    margin: 61px -10px 0;
-    
-    
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
 .catalog-left {
     width: 25%;
-    padding: 0 10px;
+    padding: 60px 10px 0 10px;
+    
+    
 }
 .catalog h3 {
    font-size: 18px;
     font-weight: 700;
     line-height: 16px;
     padding-bottom: 7px;
-    margin-left: 25px;
+    margin-left: 17px;
 }
 .menu {
-    width: 100%;
-   
+    background: #FBFBFB;
 }
 .menu li {
   list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 36px; 
+    padding: 0 0 0 28px; 
   
 }
 .menu ul{
@@ -358,15 +346,17 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 40px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 .menu a:hover  {
     color: #46A358;
     font-size: 15px;
     line-height: 40px; 
 }
+
 .baner {
     width: 100%;
-  
 }
 .baner img {
     width: 100%;
@@ -374,16 +364,15 @@
    
 }
 .catalog-main {
-    width: 75%;
-    margin-top: -16px;    
-    padding: 0 10px;
+    width: 75%;    
+    padding: 43px 10px 29px;
     
 }
 .catalog-filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 31px;
+    margin-bottom: 34px;
 }
 
 .catalog-filter-link li a {
@@ -393,6 +382,8 @@
     padding-bottom: 7px; 
     font-weight: 400;
     line-height: 16px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 .catalog-filter-link ul {
     list-style: none;
@@ -406,7 +397,10 @@
     margin: 0 47px 0 0;
     
 }
-
+.catalog-filter-link a:hover {
+    color: #46A358;
+    
+}
 .active-link {
     font-weight: 700;
     color: #46A358;
@@ -427,28 +421,40 @@
     color: #3D3D3D;
     display: flex;
     align-items: center;
+    
+}
+.sort-select {
+    background-image: url(../img/select.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #3D3D3D;
+    font-family: "Cera Pro";
+    font-weight: 400;
+    padding: 0 5px 0 10px;
 }
 
-
+.sorting {
+    padding: 0 15px;
+}
 
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px 24px;
+    margin: 0 -10px;
     align-items: flex-start;
 }
 
 .item {
    width: 33.333%;
-   padding: 0 10px;
-   display: flex;
-   margin: 0 -10px;
-   flex-wrap: wrap;
+   padding: 1px 10px 55px;
+   
 }
 .item a {
     text-decoration: none;
 }
-
 
 .catalog-item-pic {
     height: 300px; 
@@ -457,9 +463,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
+    padding-bottom: 18px;
 }
-
 
 
 .catalog-item {
@@ -468,11 +473,14 @@
     justify-content: flex-start;
     border-top: 1px solid transparent;
     position: relative;
+    transition-duration: 0.3s;
+    transition-property: border;
+    
 }
 
 .catalog-item-title {
     font-size: 16px;
-    margin-bottom: 3px;
+    padding: 5px 0 4px;
     line-height: 16px;
     margin-top: 8px;
     color: #3D3D3D;
@@ -494,15 +502,16 @@
     font-weight: 400;
     line-height: 16px;
     text-decoration: line-through;
-    padding-left: 50%;
-    transform: translateX(-50%);
+    padding-left: 64%;
+    transform: translateX(-64%);
+    
 }
 .catalog-navigation {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: 75px;
-    margin-right: 10px;
+    margin: 20px 0 0;
+    
 }
 
 .catalog-navigation a {
@@ -527,24 +536,26 @@
     padding: 7px 8px 6px 9px;
     text-transform: uppercase;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 0;
     z-index: 1;
 }
 .catalog-icons {
     position: absolute;
     transform: translateX(-50%);
-    bottom: 7px;
+    bottom: 17px;
     width: 135px;
     justify-content: space-between;
     left: 50%;
     display: none;
+  
 }
 .catalog-item:hover .catalog-icons{
     display: flex;
 }
 .catalog-item:hover {
     border-top: 1px solid #46A358;
+
 }
 .catalog-icons a {
     width: 35px;
@@ -554,15 +565,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .catalog-icons a:hover path {
     fill: #46A358;
 }
-
+.catalog-icons a path {
+    transition-duration: 0.3s;
+    transition-property: fill;
+}
 .catalog-navigation .nav-link.active-1 {
     background-color: #46A358;
     color: #fff;
     border: none;
+}
+.catalog-navigation {
+    padding: 2px;
 }
 
 .nav-arrow {
@@ -570,77 +588,81 @@
 }
 .plants-bottom {
     display: flex;
-    flex-wrap: wrap;
-    margin: 109px -10px 130px;       
+    gap: 20px;
+    justify-content: space-between; 
+    padding-top: 74px;
 }
+
 .plant-left,
 .plant-right {
     width: 50%;  
-    padding: 0 10px;
     display: flex;
-    align-items: center;
-    background:  #FBFBFB;
-    
+    align-items: stretch;
+    background: #FBFBFB;
+    min-height: 290px;
 }
 
 .img-succulents {
-    width: 45%;       
-    padding: 0;
+    width: 46%; 
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
-
-
-
+.img-succulents .img-responsive {
+    height: 100%;
+    object-fit: cover; 
+}
 .title-right {
-    width: 55%;                   
+    width: 54%; 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;       
+    align-items: flex-end; 
     text-align: right;
-    padding: 0 19px 0 0;
+    padding: 58px 21px 15px 0; 
+   
+    
 }
-
-
+.plant-right .item-p,
+.plant-right .more {
+    padding-right: 3px; 
+}
 .title-article {
-    font-family: "Cera Pro";
     font-size: 18px;
     font-weight: 900;
-    line-height: 24px;
+    line-height: 23px; 
     text-transform: uppercase;
     color: #3D3D3D;
-    margin-bottom: 21px;
+    margin: 0 0 15px 0;
 }
-
 
 .item-p {
-    font-family: "Cera Pro";
-    font-size: 14px;
+   font-size: 14px;
     color: #727272;
-    line-height: 24px;
-    font-weight: 400;
-    line-height: 24px;
+    line-height: 23px; 
+    padding: 0;
+    margin: 11px 0 22px 0;
+}
+.plant-right .item-p {
     margin-bottom: 20px;
 }
-
-
 .btn-more {
     display: flex;
+    align-self: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     background: #46A358;
-    padding: 10px 25px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 26px 10px; 
     border-radius: 6px;
 }
 
-.more  {
+.more {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
     display: flex;
     align-items: center;
 }
-
-
-
