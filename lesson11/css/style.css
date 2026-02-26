@@ -48,7 +48,7 @@
     box-sizing: border-box;
 }
 .body {
-    font-family: "Cera Pro";
+    font-family: "Cera Pro", "Tahoma", sans-serif;
     font-style: normal;
     color: #3D3D3D;
     background-color: #FFFFFF;
@@ -60,8 +60,18 @@
     padding: 0 10px;
 }
 .img-responsive {
-    width: 100%;       
+    max-width: 100%;       
     height: auto;  
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .header {
@@ -71,7 +81,7 @@
     justify-content: space-between;
     height: 73px;         
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
-    margin-bottom: 10px; /* ← вот это */
+    margin-bottom: 10px; 
 
 }
 
@@ -81,12 +91,14 @@
     gap: 51px;
     padding: 0;
     padding-bottom: 7px;
+    
 }
 .navigation > li {
     position: relative;
 }
 .navigation > li:hover ul {
     display: block;
+    
 }
 .navigation > li > a {
     
@@ -98,6 +110,7 @@
     position: relative;
     
 }
+
 .navigation > li > a::after {
     content: "";
     position: absolute;
@@ -106,6 +119,8 @@
     width: 100%;
     height: 3px;
     background-color: transparent;
+    transition-duration: 0.3s;
+    transition-property: background-color;
 }
 .navigation > ul {
     list-style: none;
@@ -116,6 +131,7 @@
 
 .navigation > li:hover > a::after {
     background-color: #46A358;
+
 }
 .navigation ul {
     list-style: none;
@@ -241,11 +257,9 @@
     justify-content: flex-end;
     box-sizing: border-box;
     padding-left: 10px;
+    
 }
 
-.img-capa .img-responsive {
-   
-}
 .main {
     border-bottom: 0.5px solid #46A358;
 }
@@ -267,7 +281,7 @@
     font-weight: 900;
     line-height: 70px;
     text-transform: uppercase;
-    padding: 3px 0 10px;
+    padding: 2px 0 10px;
     
 
 }
@@ -296,25 +310,26 @@
 }
 .catalog-left {
     width: 25%;
-    padding: 51px 0 0 2px;
+    padding: 60px 10px 0 10px;
+    
+    
 }
 .catalog h3 {
    font-size: 18px;
     font-weight: 700;
     line-height: 16px;
     padding-bottom: 7px;
-    margin-left: 25px;
+    margin-left: 17px;
 }
 .menu {
     background: #FBFBFB;
-   
 }
 .menu li {
   list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 36px; 
+    padding: 0 0 0 28px; 
   
 }
 .menu ul{
@@ -331,15 +346,17 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 40px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 .menu a:hover  {
     color: #46A358;
     font-size: 15px;
     line-height: 40px; 
 }
+
 .baner {
     width: 100%;
-  
 }
 .baner img {
     width: 100%;
@@ -348,7 +365,7 @@
 }
 .catalog-main {
     width: 75%;    
-    padding: 35px 10px 29px;
+    padding: 43px 10px 29px;
     
 }
 .catalog-filter {
@@ -365,6 +382,8 @@
     padding-bottom: 7px; 
     font-weight: 400;
     line-height: 16px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 .catalog-filter-link ul {
     list-style: none;
@@ -378,7 +397,10 @@
     margin: 0 47px 0 0;
     
 }
-
+.catalog-filter-link a:hover {
+    color: #46A358;
+    
+}
 .active-link {
     font-weight: 700;
     color: #46A358;
@@ -401,6 +423,18 @@
     align-items: center;
     
 }
+.sort-select {
+    background-image: url(../img/select.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #3D3D3D;
+    font-family: "Cera Pro";
+    font-weight: 400;
+    padding: 0 5px 0 10px;
+}
 
 .sorting {
     padding: 0 15px;
@@ -415,17 +449,13 @@
 
 .item {
    width: 33.333%;
-   padding: 1px 10px 56px;
+   padding: 1px 10px 55px;
    
 }
 .item a {
     text-decoration: none;
 }
 
-.pic-inner {
-    width: 93%;   /* регулируешь размер */
-    padding-bottom: 7px;
-}
 .catalog-item-pic {
     height: 300px; 
     background-color: #FBFBFB;
@@ -433,12 +463,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
+    padding-bottom: 18px;
 }
 
-.catalog-item-pic .img-responsive {
-   
-}
 
 .catalog-item {
     padding: 10px 0;
@@ -446,7 +473,8 @@
     justify-content: flex-start;
     border-top: 1px solid transparent;
     position: relative;
-    
+    transition-duration: 0.3s;
+    transition-property: border;
     
 }
 
@@ -520,12 +548,14 @@
     justify-content: space-between;
     left: 50%;
     display: none;
+  
 }
 .catalog-item:hover .catalog-icons{
     display: flex;
 }
 .catalog-item:hover {
     border-top: 1px solid #46A358;
+
 }
 .catalog-icons a {
     width: 35px;
@@ -535,15 +565,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .catalog-icons a:hover path {
     fill: #46A358;
 }
-
+.catalog-icons a path {
+    transition-duration: 0.3s;
+    transition-property: fill;
+}
 .catalog-navigation .nav-link.active-1 {
     background-color: #46A358;
     color: #fff;
     border: none;
+}
+.catalog-navigation {
+    padding: 2px;
 }
 
 .nav-arrow {
@@ -551,16 +588,16 @@
 }
 .plants-bottom {
     display: flex;
-    gap: 20px; /* Вернул 20px как было у тебя изначально */
+    gap: 20px;
     justify-content: space-between; 
-    padding-top: 75px;
+    padding-top: 74px;
 }
 
 .plant-left,
 .plant-right {
     width: 50%;  
     display: flex;
-    align-items: stretch; /* ← вот это главное */
+    align-items: stretch;
     background: #FBFBFB;
     min-height: 290px;
 }
@@ -581,20 +618,18 @@
     flex-direction: column;
     align-items: flex-end; 
     text-align: right;
-    /* Увеличиваем padding-top, чтобы опустить буквы на макет */
-    /* Увеличиваем padding-right, чтобы сдвинуть буквы влево на макет */
-    padding: 57px 20px 15px 0; 
+    padding: 58px 21px 15px 0; 
    
     
 }
 .plant-right .item-p,
 .plant-right .more {
-    padding-right: 3px; /* подгони 20–40px как нужно */
+    padding-right: 3px; 
 }
 .title-article {
     font-size: 18px;
     font-weight: 900;
-    line-height: 23px; /* Уплотняем строки */
+    line-height: 23px; 
     text-transform: uppercase;
     color: #3D3D3D;
     margin: 0 0 15px 0;
@@ -605,8 +640,7 @@
     color: #727272;
     line-height: 23px; 
     padding: 0;
-    /* Увеличиваем первый ноль (margin-top), чтобы опустить текст ниже */
-    margin: 11px 0 23px 0;
+    margin: 11px 0 22px 0;
 }
 .plant-right .item-p {
     margin-bottom: 20px;
@@ -704,6 +738,8 @@ line-height: 26px;
     align-items: center;
     gap: 6px;
     padding-bottom: 15px;
+    transition-duration: 0.5s;
+    transition-property: color;
 }
 
 .art-blog:hover .btn-blogs {
@@ -733,7 +769,7 @@ line-height: 26px;
 .form-item {
     width: 35%;
     padding: 36px 0 0 33px;
-    margin-left: auto; /* сдвиг вправо */
+    margin-left: auto; 
    
 }
 .info-item {
@@ -757,7 +793,7 @@ line-height: 26px;
     padding: 0 34px 0 0 ;
 }
 .form-input {
-    width: 76%; /* теперь ровно 75% */
+    width: 76%; 
     height: 40px;
     border: 1px solid #E5E5E5;
     padding: 13px 12px;
@@ -765,8 +801,10 @@ line-height: 26px;
     font-size: 14px;
     color: #ACACAC;
     line-height: 16px;
-
-
+}
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .form-title {
     display: flex;
@@ -797,29 +835,24 @@ line-height: 26px;
     padding: 21px 0 19px;             
     display: flex;
     align-items: center;          
-    /* Прижимаем всё к левому краю, чтобы контролировать отступы вручную */
     justify-content: flex-start;  
 }
 
 .logo-contant {
-    /* Подбираем точный отступ от лого до первого контакта (адреса) */
-    /* На скрине разрыв большой, попробуй 80px - 100px */
     margin: 2px 110px 0 0; 
 }
-
+.contact a:hover {
+    color: #46A358;
+}
 .contact {
     display: flex;
     align-items: center;
-    /* Убираем ширину 24%, она расталкивает блоки */
     width: auto; 
-    /* Задаем расстояние между самими контактами */
-    /* Это подвинет 2-й и 3-й блоки влево к первому */
     margin-right: 68px; 
     text-decoration: none;
     color: #3D3D3D;
 }
 
-/* Последнему контакту отступ справа не нужен */
 .contact:last-child {
     margin-right: 0;
 }
@@ -833,23 +866,19 @@ line-height: 26px;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
+    transition-duration: 1s;
+    transition-property: color;
 }
 .contact:nth-child(3) {
-    /* Отрицательный margin-top поднимает блок вверх */
     margin-top: -3px; 
-    /* Расстояние до третьего контакта (телефона) */
     margin-right: 60px; 
 }
 
-/* Выбираем третий контакт (телефон) */
 .contact:nth-child(4) {
-    /* Поднимаем вверх так же, как и второй */
     margin-top: -3px; 
-    /* Сдвигаем ВЛЕВО: уменьшаем margin-right у ПРЕДЫДУЩЕГО блока */
 }
 .footer-item {
     display: flex;
-    /* Возвращаем space-between, чтобы соцсети улетели вправо автоматически */
     justify-content: space-between; 
     padding: 30px 0;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2); 
@@ -903,6 +932,8 @@ line-height: 26px;
     border: 1px solid rgba(70, 163, 88, 0.2);
     border-radius: 4px;
     transition: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: border-color;
 }
 
 .social-list li a:hover {
