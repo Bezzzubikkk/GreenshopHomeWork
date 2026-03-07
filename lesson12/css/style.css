@@ -84,7 +84,9 @@
     margin-bottom: 10px; 
 
 }
-
+.logo svg{
+    display: block;
+}
 .navigation {
     list-style: none;
     display: flex;
@@ -174,8 +176,17 @@
     text-align: right;
     min-width: 180px;
     
-   
-   
+}
+.search:hover path {
+    fill: #46A358;
+  
+}
+.shop:hover path {
+    fill: #46A358;
+    
+}
+.login:hover  {
+    color: #222121;
 }
 .search {
     border: none;
@@ -260,7 +271,7 @@
 }
 
 .main {
-    border-bottom: 0.5px solid #46A358;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.2); 
 }
 .capa.text {
     font-size: 16px;  
@@ -309,7 +320,7 @@
 }
 .catalog-left {
     width: 25%;
-    padding: 60px 10px 0 10px;
+    padding: 46px 10px 0 10px;
     
     
 }
@@ -322,42 +333,56 @@
 }
 .menu {
     background: #FBFBFB;
+    padding-top: 14px;
 }
 .menu li {
   list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 28px; 
+ 
   
 }
 .menu ul{
     padding-left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: auto;
+    width: 100%;
     
 }
 .menu ul a {
-    text-decoration: none;
+   text-decoration: none;
+    color: #3D3D3D;
+    font-size: 15px;
+    line-height: 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    padding: 0 20px 0 28px;
+    transition-duration: 0.5s;
+    transition-property: color;
+    
+}
+.count {
     color: #3D3D3D;
     font-size: 15px;
     font-weight: 400;
     line-height: 40px;
-    transition-duration: 0.5s;
-    transition-property: color;
 }
 .menu a:hover  {
     color: #46A358;
     font-size: 15px;
     line-height: 40px; 
 }
+.menu a:hover .count {
+    color: #46A358;
+}
 .checkbox-span {
     display: inline-flex;
 }
 .checkbox {
-    padding: 45px 0 10px 0;
+    padding: 45px 18px 20px 0;
     background: #FBFBFB;
 }
 .checkbox-span {
@@ -366,11 +391,13 @@
 .checkbox-label {
    display: flex;
     align-items: center; 
-    margin: 0 0 15px -8px;
+    margin: 0 0 0 -8px;
     cursor: pointer;
-}
-.checkbox-title {
-    margin-bottom:  10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    cursor: pointer;
+   
 }
 .slider{
     background: #FBFBFB;
@@ -394,18 +421,22 @@
     border-radius: 6px;
     background: #46A358;
     text-decoration: none;
-    padding: 8px 23px 7px 24px;
+    padding: 7px 23px 7px 24px;
     border: none;
     width: 82px;
     height: 35px;
-    margin-left:  25px;
+    margin-left:  27px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
 }
 .input-slider {
     border: none;
     color: #46A358;
     font-size: 15px;
     font-weight: 700;
+    background-color: transparent;
 }
 .slider-price {
     padding: 32px 0 0 15px;
@@ -554,12 +585,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 
 .catalog-item {
-    padding: 10px 0;
+    margin-bottom: 10px;
     flex-direction: column;
     justify-content: flex-start;
     border-top: 1px solid transparent;
@@ -671,25 +702,45 @@
     border: none;
 }
 .catalog-navigation {
-    padding: 2px;
+    padding: 2px 0;
+    font-weight: 300;
+ 
 }
-
+.catalog-navigation {
+    font-size: 18px;
+}
+.nav-link {
+    background-color: #FBFBFB;
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
+}
+.nav-link:hover  {
+    background-color: #46A358;
+    color: #fff;
+}
+.nav-arrow:hover {
+    background-color: #46A358;
+}
 .nav-arrow {
     background-color: #FBFBFB;
+    transition-duration: 0.3s;
+    transition-property: background-color;
 }
 .plants-bottom {
     display: flex;
-    gap: 20px;
-    justify-content: space-between; 
+    margin: 0 -10px;
     padding-top: 74px;
 }
 
 .plant-left,
 .plant-right {
-    width: 50%;  
+    width: 50%; 
+    padding: 0 10px;
+}
+.background-pl {
+    background: #FBFBFB;
     display: flex;
     align-items: stretch;
-    background: #FBFBFB;
     min-height: 290px;
 }
 
@@ -702,6 +753,7 @@
 .img-succulents .img-responsive {
     height: 100%;
     object-fit: cover; 
+    padding: 5px 0 0  10px;
 }
 .title-right {
     width: 54%; 
@@ -843,7 +895,7 @@ line-height: 26px;
 .article-plant {
     display: flex;
     background: #FBFBFB;
-    padding-top: 97px;
+    margin-top: 97px;
 }
 .plant-info {
     width: 20%;
@@ -957,7 +1009,7 @@ line-height: 26px;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     transition-property: color;
 }
 .contact:nth-child(3) {
@@ -973,7 +1025,7 @@ line-height: 26px;
     justify-content: space-between; 
     padding: 30px 0;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2); 
-    border-top: 0.5px solid #46A358;
+    border-top: 1px solid rgba(70, 163, 88, 0.2);
     width: 100%;
     margin: 0 -10px;
     
@@ -1060,4 +1112,12 @@ line-height: 26px;
     line-height: 30px; 
     color: #3D3D3D;
     text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    color: #3D3D3D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 5px;
 }
